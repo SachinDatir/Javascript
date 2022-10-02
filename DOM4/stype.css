@@ -1,0 +1,19 @@
+h1 {
+    color: crimson
+}
+
+.up {
+    color: forestgreen;
+}
+
+.down {
+    color: maroon;
+}
+
+.remove {
+    color:lawngreen;
+}
+
+li{
+    color: red;
+}
