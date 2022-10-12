@@ -64,18 +64,19 @@ let pank = {
     lastName: 'more',
     NikName: 'pankya'
 }
-let a = skd.display
-a()  // there is no referense of this keyword 
+let a = skd.display   // problem statement ==>there is no referense of this keyword 
+a()  //a()==>value
 //      a==>function(){
 //     console.log(this.firstName+this.lastName)
 // }
 
+
+// Bind()  return a function
 a1 = a.bind(pank)
 a1()
 
 
 // CALL METHOD
-
 // call is a function  that you use to change the value of 'this' inside a function
 //  and execute it with the arguments provided.
 let obj = {

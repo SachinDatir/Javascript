@@ -169,18 +169,18 @@ function Human(fn, ln, age, skl) {
     this.age = age
     this.skills = skl
 }
-Human.prototype.display=function(){
-    console.log(this.firstName+' '+this.lastName)
+Human.prototype.display = function () {
+    console.log(this.firstName + ' ' + this.lastName)
 }
 
-Human.prototype.color=function(){   /// this is method
+Human.prototype.color = function () {   /// this is method
     console.log('blue')
 }
-Human.prototype.culture='Indian'
+Human.prototype.culture = 'Indian'
 
-let obj7=new Human('pankaj','more','24',['chem','java'])
+let obj7 = new Human('pankaj', 'more', '24', ['chem', 'java'])
 console.log(obj7)
-console.log(new Human('sanket','datir',25,['software eng','Mpsc aspirant']))
+console.log(new Human('sanket', 'datir', 25, ['software eng', 'Mpsc aspirant']))
 
 obj7.color()
 console.log(obj7.culture)
@@ -198,7 +198,71 @@ console.log(obj7.hasOwnProperty('culture'))     /// return false because it does
 //lekin aisa karna nahi chahiye,aisa karne se problem create hoti hai
 
 
-// function cunstructor
+
+//ES6 CLASS >>>>>>>>>>>>>>>>>>>>>>>>>>
+
+class Student {
+    constructor(fn, ln, age, std) {
+        this.firstName = fn
+        this.lastName = ln
+        this.age = age
+        this.standard = std
+    }
+    // displayName(){
+    //     console.log(this.firstName+" "+this.standard)
+    // }
+}
+Student.prototype.displayName = function () {
+    console.log(this.firstName + " " + this.lastName)
+}
+
+// let obj8 = new Student('sachin','datir',23,'Bsc')
+// obj8.displayName()
+// let obj9 = new Student('pranamya','pangare',22,'Alohol Tech')
+// obj9.displayName()
+// console.log(obj8)
+// console.log(obj9)
+
+class Bank {
+    constructor(AccName, AccNo, city, Bal) {
+        this.AccName = AccName
+        this.AccNo = AccNo
+        this.city = city
+        this.Balance = Bal
+        this.transaction = []
+    }
+    Deposits(amount) {
+        this.Balance = this.Balance + amount
+        this.transaction.push(amount)
+        return this.Balance
+    }
+    withdrawl(amount) {
+        if (this.Balance > amount) {
+            this.Balance = this.Balance - amount
+            this.transaction.push(amount)
+            return this.Balance
+        }
+        else {
+            console.log('insufficient balance')
+        }
+
+    }
+    lastFourTransaction() {
+        console.log(this.transaction.slice(-4))
+    }
+}
+
+let sbi = new Bank('sachin Datir', 9376, 'sangamner', 5000)
+console.log(sbi)
+sbi.Deposits(5000)
+sbi.withdrawl(1000)
+sbi.Deposits(6000)
+sbi.withdrawl(5345)
+sbi.lastFourTransaction()
+console.log(sbi.Balance)
+
+
+
 
 //       cd OOPS-Concept
 //       node class.js
