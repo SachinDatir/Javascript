@@ -59,8 +59,8 @@ function substactionA() {
 
 // Encapsulation
 
-var firstName = 'pranamya'
-var lastName = 'pangare'
+
+
 let info = {
     firstName: 'sachin',
     lastName: 'datir',
@@ -70,7 +70,7 @@ let info = {
         console.log(this.firstName + " " + this.lastName)
 
         function display2() {
-            // there is no referense of this key word
+            // there is no referense of this keyword
 
             // this ka referense window object
             console.log(this.firstName + this.lastName)   // undefined + undefined = NaN
@@ -78,7 +78,7 @@ let info = {
         display2()
     }
 }
-info.display()
+// info.display()
 
 
 //  SOLOTION
@@ -91,8 +91,8 @@ let info2 = {
         console.log(this.firstName + " " + this.lastName)
 
         let display2 = () => {
-        //   solution by arrow function ===> display is a emmidiate parent of display2 
-        // and display la emmidiate parent is  info>> so display info ki property inheriate karega
+        //   solution by arrow function ===> display2 is a emmidiate parent of display
+        // and display  emmidiate parent is  info2>> so display info ki property inheriate karega
             console.log(this.firstName +" "+ this.lastName)   
         }
          display2()
@@ -101,14 +101,16 @@ let info2 = {
 // info2.display()
 
 
+var firstName = 'pranamya'
+var lastName = 'pangare'
 
 let info3 = {
     firstName:"sachin",
     lastName:"datir",
-    display:function(){
+    display:()=>{
         // this ======>  immediate parent this keyword
         console.log(this.firstName + this.lastName)
-        let display2 = ()=> {
+         display2=()=> {
             // this =====> immediate parent this keyword
             console.log(this.firstName + this.lastName)
         }

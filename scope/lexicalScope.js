@@ -1,5 +1,18 @@
-//node lexicalScope.js
+//  node lexicalScope.js
 
+
+// lexical scope ==> variable define in out side the function can be accsessible =>
+// into another funtion define after the variable declaration
+
+var c = 1
+function lexi(){
+    let d = 4
+    return c+d
+}
+console.log(lexi())
+
+console.log('closure******************************')
+// closure
 function addition() {
     let a = 19
     let b = 30
@@ -16,20 +29,21 @@ function addition() {
             console.log(e + f)
             console.log(a + b + c + d + e + f)
         }
-        //         additionC()
+            additionC()
     }
-    //     additionB()
+       additionB()
 }
-// addition()
+ addition()
 
 //closure 
+
 function add(x, y) {
     console.log(x + y)
-    return x + y
+    //return x + y
 
 }
-// let a = add(11, 22)
-// console.log(a)
+let ab = add(11, 22)
+console.log(ab)
 
 
 //node lexicalScope.js
@@ -45,22 +59,43 @@ function addC() {
 // tt()
 
 // let and const are blocked scope
-let x = 6 
+// let x = 6 
 //console.log(x)
 
+// closure ===> js ka ye concept hai jo privacy maintain karne me help karega
+//return should be the last statement of function
+//closure ka meaning ye rehta hai ki return likhne ke baad bhi uske upar ke parent ke function accesible rehte hai
+//hum wo parent ke function ko directly accesible nahi kar sakte...yeh bhi ek privacy maintain karne ka tarika hai
 
-let y = 300
-{
-    let y = 60 
-    //console.log(y)
+
+function add(){
+    let a = 20
+    let b = 50
+    return function(){
+        console.log(a)
+        console.log(b)
+    }
+  
 }
-//console.log(y)
+let a = add()
+a()
 
-//node lexicalScope.js
 
-let r = 300
-{
-    r = 60 
-    console.log(r)
-}
-console.log(r)
+
+// scope
+// let y = 300
+// {
+//     let y = 600 
+//     console.log(y)
+// }
+// console.log(y)
+
+// //   node lexicalScope.js
+
+// let r = 300
+// {
+//     r = 60        // r value update 
+//     console.log(r)
+// }
+
+// console.log(r)
