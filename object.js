@@ -104,12 +104,15 @@ let A = obj.display
 
 A.call(obj1)
 A.call(obj2)
+
 console.log('**********Apply************')
 A.apply(obj2)
 A.apply(obj1)
-console.log('************Bind**********')
 
+
+console.log('************Bind**********')
 // The bind function creates a copy of a function with a new value to the this present inside the calling function.
+//  return a new function
 let A3 = A.bind(obj2)
 A3()
 

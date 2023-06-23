@@ -1,5 +1,9 @@
-// LEXICAL scope
+// "use strict";
+// let x1 = this;
+// console.log(x1)
 
+console.log('.....................')
+// LEXICAL scope
 // function inside function ===> we can access the parent function properties and method 
 // in child function but parent function can't access child property
 function addition() {
@@ -91,11 +95,11 @@ let info2 = {
         console.log(this.firstName + " " + this.lastName)
 
         let display2 = () => {
-        //   solution by arrow function ===> display2 is a emmidiate parent of display
-        // and display  emmidiate parent is  info2>> so display info ki property inheriate karega
-            console.log(this.firstName +" "+ this.lastName)   
+            //   solution by arrow function ===> display2 is a emmidiate parent of display
+            // and display  emmidiate parent is  info2>> so display info ki property inheriate karega
+            console.log(this.firstName + " " + this.lastName)
         }
-         display2()
+        display2()
     }
 }
 // info2.display()
@@ -105,12 +109,12 @@ var firstName = 'pranamya'
 var lastName = 'pangare'
 
 let info3 = {
-    firstName:"sachin",
-    lastName:"datir",
-    display:()=>{
+    firstName: "sachin",
+    lastName: "datir",
+    display: () => {
         // this ======>  immediate parent this keyword
         console.log(this.firstName + this.lastName)
-         display2=()=> {
+        let display2 = () => {
             // this =====> immediate parent this keyword
             console.log(this.firstName + this.lastName)
         }
@@ -119,6 +123,31 @@ let info3 = {
 }
 info3.display()
 
+function myFunction() {
+    return this;
+}
+
+console.log(myFunction())
+
+// refers global object
+let x = this
+console.log(x)
+
+console.log('**********************************')
+
+var variable1 = 23;
+
+let variable2 = 89;
+
+function catchValues() {
+    console.log(variable1);
+    console.log(variable2);
+
+    // Both the variables can be accessed anywhere since they are declared in the global scope
+}
+// window.variable1; // Returns the value 23
+
+// window.variable2;
 
 
 

@@ -25,7 +25,7 @@ let max = arr2.reduce((acc, el) => {
 // console.log(max)
 
 // programme 3
-//Find the max  from the given array
+//Find the minimum  from the given array
 let arr3 = [12251, 3434, 66433, 636, 6353, 55353, 535, 5335, 3525, 4416, 4324, 33694]
 let mini = arr3.reduce((acc, el) => {
     if (el > acc) {

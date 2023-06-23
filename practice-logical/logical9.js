@@ -140,22 +140,23 @@ console.log(c)
 
 //Check no whether that no is perfect no or not
 
-let N = 28
-let sum = 0
-for (let i = 0; i < N; i++) {
-    if (N%i == 0) {
-        sum = sum + i
+function perfect(n) {
+    let sum = 0
+    for (let i = 0; i < n; i++) {
+        if (n % i == 0) {
+            sum = sum + i
+        }
+    }
+    if (sum == n) {
+        console.log(n + ' is a perfect number')
+    }
+    else {
+        console.log(n + ' is not a perfect number')
     }
 }
-
-if (sum==N) {
-    console.log(N + ' is a perfect Number')
-}
-else {
-    console.log(N + '  is not a perfect Number')
-}
+perfect(28)
 
 
-//     
+//
 //         node logical9.js
 //        cd practice-logical

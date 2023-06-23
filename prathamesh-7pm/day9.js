@@ -44,6 +44,6 @@ function hashing(a) {
         }
     }
 }
-console.log(hashing([4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 3, 3, 3,]))
+console.log(hashing([4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 3, 3, 3,7,7]))
 
 //  node day9.js

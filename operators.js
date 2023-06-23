@@ -62,7 +62,7 @@ let info = {
 console.log(info.fullName?.firstName)
 console.log(info.parent?.mother?.firstName)
 
-
+console.log('*********************optional******************')
 
 
 // Es6 
@@ -84,10 +84,10 @@ function add(a, ...arr) {
     })
     return aa
 }
-console.log(add(40, 24, 3, 34, 33, 5, 45, 43, 21))
-
+console.log(add(40, 24, 3, 34, 33, 5, 45, 43, 21,88))
+console.log('*********************rest************')
 // spread operators
-let marks = [1, 235235, 5, 5532, 55, 55, 534, 535, 3]
+let marks = [1, 35, 5, 52, 55, 534, 535, 3]
 
 function addFive(a, b, c, d, e) {
     console.log(a + b + c + d + e)
@@ -164,4 +164,28 @@ let student = {
 }
 let q1 = [...student.transaction , ...student.transaction2]
 console.log(q1)
+
+
+// Spread operator (…): Although the syntax of the spread operator is exactly the same as the rest parameter, 
+// the spread operator is used to spreading an array, and object literals. 
+//We also use spread operators where one or more arguments are expected in a function call.
+function addFourNumbers(num1, num2, num3, num4) {
+    return num1 + num2 + num3 + num4;
+}
+
+let fourNumbers = [5, 6, 7, 8];
+
+console.log(addFourNumbers(...fourNumbers));
+
+let array1 = [3, 4, 5, 6];
+let clonedArray1 = [...array1];
+// Spreads the array into 3,4,5,6
+console.log(clonedArray1); // Outputs [3,4,5,6]
+
+
+
+let obj11 = {x:'Hello', y:'Bye'};
+let obj21 = {z:'Yes', a:'No'};
+let mergedObj = {...obj11, ...obj21}; // Spreads both the objects and merges it
+console.log(mergedObj);
 //   node operators.js

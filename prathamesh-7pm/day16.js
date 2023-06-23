@@ -34,6 +34,7 @@
 
 let arr2 = [34, 5, 6, 7]
 console.log(`this is ${arr2.length - 1}`)
+
 function MAX(arr2) {
     let a = [0]
     for (let i = 0; i < arr2.length; i++) {

@@ -172,7 +172,7 @@ async function GetData(one, two, three) {
     ])
     console.log(data)
 }
-// GetData(1,2,3)
+//  GetData(1,2,3)
 
 async function GetData1(one, two, three) {
     let data = await Promise.any([   //pass or fail first exicute will print
@@ -182,7 +182,7 @@ async function GetData1(one, two, three) {
     ])
     console.log(data)
 }
-GetData1()
+ GetData1()
 
 async function GetData2(one, two, three) {
     let data = await Promise.race([    //first exicute will print
@@ -192,7 +192,7 @@ async function GetData2(one, two, three) {
     ])
     console.log(data)
 }
-// GetData2(2, 3)
+ GetData2()
 
 async function GetData3(one, two, three) {
     let data = await Promise.allSettled([   ///gives all pass or fail

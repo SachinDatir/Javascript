@@ -82,12 +82,12 @@
 
 
 //     rev=string[i]+rev
-       
+
 //  }
 //  console.log(rev)
 
 //  console.log("--Or")
- 
+
 // let rev1=" "
 //  for(let i=string.length-1;i>=0;i--){
 
@@ -179,9 +179,9 @@
 // //Program 9
 // //Calculate vowels in the string
 
-let str8="I want a very good job as early as possible"
+let str8 = "I want a very good job as early as possible"
 
-let count=0
+let count = 0
 
 // for(let i=0;i<str8.length;i++){
 //     if(str8[i]=='a' || str8[i]=='e' || str8[i]=='i' || str8[i]=='o' || str8[i]=='u'){
@@ -192,28 +192,28 @@ let count=0
 
 // //Alternate way
 
-for(let i=0;i<str8.length;i++){
-    switch(str8[i]){
+for (let i = 0; i < str8.length; i++) {
+    switch (str8[i]) {
         case 'a':
-        case 'A':    
-            count=count++
-            
+        case 'A':
+            count = count++
+
         case 'e':
-        case 'E':    
-            count=count++
-            
+        case 'E':
+            count = count++
+
         case 'i':
-        case 'I':    
-            count=count++
-            
+        case 'I':
+            count = count++
+
         case 'o':
-        case 'O' :   
-            count=count++
-            
+        case 'O':
+            count = count++
+
         case 'u':
-        case 'U':    
-            count=count++
-                         
+        case 'U':
+            count = count++
+
     }
 }
 console.log(count)
@@ -234,10 +234,10 @@ console.log(count)
 // console.log(sum)
 
 let x1 = 14
-let sum1 =0
-for(let i = 0;i<x1;i++){
-    if(x1%i==0){
-        sum=sum+i
+let sum1 = 0
+for (let i = 0; i < x1; i++) {
+    if (x1 % i == 0) {
+        sum = sum + i
     }
 }
 
@@ -249,7 +249,7 @@ for(let i = 0;i<x1;i++){
 // for(let i=0;i<y;i++){
 //     if(y%i==0){
 //         sum1=sum1+i
-    
+
 //     }   
 // }
 // if(sum1==y){
@@ -262,14 +262,14 @@ for(let i = 0;i<x1;i++){
 // //Program 13
 // //Take one no and return the no of digit from that no
 
- let z=234
- let result=[]
- newN=z.toString()
+let z = 234
+let result = []
+newN = z.toString()
 
- for(let i=0;i<newN.length;i++){
-     result.push(newN.charAt(i))
- }
- console.log(result)
+for (let i = 0; i < newN.length; i++) {
+    result.push(newN.charAt(i))
+}
+console.log(result)
 
 //Program 14
 //Take two no one is row and other is column and print it in square, right angle triangle
@@ -287,19 +287,19 @@ for(let i = 0;i<x1;i++){
 //Program 15
 //Calculate count of capitals in the string
 
-let str11="My name is Priyanka Dani"
-count=0
-for(let i=0;i<str11.length;i++){
-    if(str11.charCodeAt(i)>=65 && str11.charCodeAt(i)<=90){
+let str11 = "My name is Priyanka Dani"
+count = 0
+for (let i = 0; i < str11.length; i++) {
+    if (str11.charCodeAt(i) >= 65 && str11.charCodeAt(i) <= 90) {
         count++
     }
 }
 console.log(count)
 
 //Alternate way
-count=0
-for(let i=0;i<str11.length;i++){
-    if(str11[i]>='A' && str11[i]<='Z'){
+count = 0
+for (let i = 0; i < str11.length; i++) {
+    if (str11[i] >= 'A' && str11[i] <= 'Z') {
         count++
     }
 }
@@ -307,20 +307,20 @@ console.log(count)
 
 //Alternate way2
 
-let capitalss="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-let str12="Try Try But Dont Cry"
-count=0
-for(let i=0;i<str12.length;i++){
-    if(capitalss.includes(str12[i])){
+let capitalss = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+let str12 = "Try Try But Dont Cry"
+count = 0
+for (let i = 0; i < str12.length; i++) {
+    if (capitalss.includes(str12[i])) {
         count++
     }
 }
 console.log(count)
 
 //Alternate way
-count=0
-for(let i=0;i<str12.length;i++){
-    if(capitalss.indexOf(str12[i])>=0){
+count = 0
+for (let i = 0; i < str12.length; i++) {
+    if (capitalss.indexOf(str12[i]) >= 0) {
         count++
     }
 }
@@ -329,19 +329,19 @@ console.log(count)
 //---------------------------------------------------------------------------------------->>>>>
 //Problem 16
 //input-"you are great"  output-"uoy era taerg"
-let a='Wednsday is good day'
-let c="This is our company"
-let d="you are great"
-function reverse(str){
-    rev=""
-    for(let i=0;i<str.length;i++){
-        rev=str[i] + rev
+let a = 'Wednsday is good day'
+let c = "This is our company"
+let d = "you are great"
+function reverse(str) {
+    rev = ""
+    for (let i = 0; i < str.length; i++) {
+        rev = str[i] + rev
     }
-      //console.log(rev) 
-     let c= rev.split(' ')
-     let d=c.reverse()
-     let b=d.join(' ')
-     console.log(b)        
+    //console.log(rev) 
+    let c = rev.split(' ')
+    let d = c.reverse()
+    let b = d.join(' ')
+    console.log(b)
 }
 reverse(a)
 reverse(c)

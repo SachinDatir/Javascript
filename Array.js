@@ -1,4 +1,16 @@
 // //ARRAY node Array.js
+
+//  In js there are 2 type of loops 
+
+// for loop -syntax   ----------for(i=O;i<array.length;i++){     }
+
+// while loop-------------------while j=0(j<array.length,j++){     }
+
+
+// for loop is used for finite conditions &
+
+// while loop is used for infinite conditions 
+
 let cities2 = ["pune", "akole", "mumbai", "nashik"]
 let a = cities2.unshift("sangamner")
 let b = cities2.push("ganore")
@@ -110,4 +122,43 @@ for (let i = 0, j = a1 - 1; i < a1 / 2, j > a1 / 2; i++, j--) {
     arr[j] = temp
 }
 console.log(arr)
-//ARRAY node Array.js
+
+
+//  shift all 0 from array to right side(Techcture interview que)
+let inp = [0, 3, 10, 0, 4, 0]
+console.log(inp.sort())
+
+let ar = []
+let count = []
+for (let i = 0; i < inp.length; i++) {
+    if (inp[i] != 0) {
+        ar.push(inp[i])
+    } else {
+        count.push(inp[i])
+    }
+}
+console.log(ar.concat(count))
+
+// for converting this array into uppercase 
+let countries = ['india', 'usa', 'russia', 'maldives']
+let uppercaseC = []
+for (let i = 0; i < countries.length; i++) {
+    let count = countries[i].toUpperCase()
+    uppercaseC.push(count)
+}
+console.log(uppercaseC)
+
+let ar1 = ['india', 'usa', 'russia', 'maldives']
+let ar2 = ar1.reduce((acc,el)=>{
+    if(el.length>acc.length){
+        return el
+    }
+    else{
+        return acc
+    }
+})
+console.log(ar2)
+
+
+// node Array.js
+

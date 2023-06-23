@@ -67,7 +67,7 @@ function MaxMin(a) {
 }
 //console.log(MaxMin([11246, , 556365, 53535, 555353, 53533, 333333, 333545, 64653, 7546]))
 
-// Find pair of elements in array with sum is equal to ...
+// Find pair of elements in array with sum is equal to given number
 console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
 let arr9 = [3,2,4,5,1,3]
 let k2 = 6
